@@ -1,1 +1,2 @@
-dipper rrr
+dipper 
+baduk
