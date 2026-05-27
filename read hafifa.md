@@ -1,5 +1,5 @@
 dipper
 baduk
 
-jk
+lkk
 
