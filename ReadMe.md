@@ -1,5 +1,0 @@
-dipper
-baduk
-
-jk
-
