@@ -17,7 +17,7 @@ def try1():
     # bind the socket to a public host, and a well-known port
     serversocket.bind((HOST, PORT))
 
-    #queue up as many as 5 connect requests
+    #queue up as many as 2 connect requests
     serversocket.listen(2)
 
 def main():
@@ -41,15 +41,12 @@ def main():
                 print("Output:", command.stdout)
                 print("Return Code:", command.returncode)
 
-                # code = subprocess.call(data)
 
                 if command.returncode == 1:
                     print("Success")
                 else:
                     print("Failed")
 
-
-                #connection.sendall(data)
 
 
 
