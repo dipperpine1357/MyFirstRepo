@@ -2,6 +2,7 @@
 # Author: dipper
 # Date: 28.5.2026
 # Description: the code takes cmd commands through a tcp connection
+#                   i thought i should have done through a file so i did it to
 # imports
 import socket
 import subprocess
@@ -24,7 +25,7 @@ def main():
                 data = data.decode(DECODE_TYPE) #convert bytes to string
 
                 # if we receive nothing then close connection
-                if not data:
+                if data == "close":
                     break
                 print(f"command: {data}")
 
@@ -33,8 +34,11 @@ def main():
                 print("Output:", command.stdout)
                 print("Return Code:", command.returncode)
 
+                # data = connection.recv(BYTES_RECIVED)
+                # data = data.decode(DECODE_TYPE) #convert bytes to string                
 
-                if command.returncode == 1:
+
+                if command.returncode != 1:
                     print("Success")
                 else:
                     print("Failed")
