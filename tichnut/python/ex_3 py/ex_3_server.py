@@ -34,9 +34,6 @@ def main():
                 print("Output:", command.stdout)
                 print("Return Code:", command.returncode)
 
-                # data = connection.recv(BYTES_RECIVED)
-                # data = data.decode(DECODE_TYPE) #convert bytes to string                
-
 
                 if command.returncode != 1:
                     print("Success")
