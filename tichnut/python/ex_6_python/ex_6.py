@@ -2,16 +2,15 @@
 # Author: dipper
 # Date: 31.5.2026
 # Description:  the code does dirbuster 
+#               (if they are in [] then they are from the dir of the name before them)
 # imports
 import requests
 
 #CONSTANTS
-DOMAIN_PATH = r"https://www.ynet.co.il"
-# FILE_PATH = r"C:\dipper\my_first_repo\tichnut\python\ex_6_py\common_files_names_ex6_py.txt"
 GOOD_STATUSE_CODE = 200
 
-# this func takes all the names
-# this function returns all the seccessfull url names
+# this func takes all the names as list
+# this function returns all the seccessfull url names and domain names
 def requesting (names, base_url):
     good_names = []
     current_url = ""
@@ -31,20 +30,25 @@ def requesting (names, base_url):
     return good_names
 
 def main():
-    url = DOMAIN_PATH
+    
     names = []
     seccess = []
-    user_path = input("enter path \n")
+    user_path = input("enter path to file with names to try\n like:"+
+                        r"C:\dipper\my_first_repo\tichnut\python\ex_6_py\common_files_names_ex6_py.txt" + "\n")
+    domain_path = input("enter ip or url to attack (Dirbuster): (like -> https://www.ynet.co.il)\n")
+
+    # check input
+    user_path = user_path.replace('"', '')
     with open(user_path, "r") as file:
         for line in file:
             line = line.strip()
             names.append(line)
-            url = DOMAIN_PATH + "/" + line
-            seccess = requesting(names, DOMAIN_PATH)
+            url = domain_path + "/" + line
+            seccess = requesting(names, domain_path)
     print (f"""\nall the fitting names (if they are in [] then """
            f"""they are from the dir of the name before them):\n{seccess}""")
             
-
+    input("been nice attackingwith u \nbye")
 
 
 if __name__=="__main__":

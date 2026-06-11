@@ -6,7 +6,7 @@
 # imports
 import os
 
-#this function recives a directory path
+# this function recives a directory path
 # this function returns a list with all 
 # the files and folder in a directory 
 def list_files2(path):
@@ -23,10 +23,13 @@ def list_files2(path):
     # lists only files and ignores folders inside a directory
     for object in all_objects:
         temp_path = path + "\\" + object
-        if os.path.isfile(temp_path):
 
-            # add to list the files in the directory
-            temp_files_list.append(object)
+        temp_files_list.append(object)
+
+        # it is possible to replace the line above with the if statment so the listwon't show the folders
+        # if os.path.isfile(temp_path):
+        #     # add to list the files in the directory
+        #     temp_files_list.append(object)
     files_list = temp_files_list
     
 
@@ -52,6 +55,7 @@ def main():
 
     full_list = list_files2(path)
     print (f"finall list : \n {full_list}")
+    input("been nice attackingwith u \nbye")
 
 
 if __name__=="__main__":

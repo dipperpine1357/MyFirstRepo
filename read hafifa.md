@@ -1,5 +1,1 @@
-dipper
-baduk
-
-lkk
 

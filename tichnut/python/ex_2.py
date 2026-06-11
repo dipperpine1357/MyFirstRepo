@@ -3,7 +3,7 @@
 # Date: 27.5.2026
 # Description: the code takes the mouse to random places on the screen every 10 seconds
 # imports
-import win32api
+import win32api, msvcrt
 import random, time
 
 # this function generates random x & y places on the screen
@@ -16,11 +16,14 @@ def random_xy():
 def main():
     while 1:
         x_cordinate, y_cordinate = random_xy()
+        if msvcrt.kbhit():
+            if msvcrt.getch().lower() == b'q':
+                break
         win32api.mouse_event(1, x_cordinate, y_cordinate, 0)
         print ("x_cordinate-> ", x_cordinate,"\n", "y_cordinate-> ", y_cordinate)
-        print ("to stop press cntrl + c")
+        print ("to stop press q and wait 10 seconds")
         time.sleep(10)
-
+    input("been nice attackingwith u \nbye")
 
 if __name__=="__main__":
     main()
