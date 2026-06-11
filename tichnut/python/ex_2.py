@@ -7,6 +7,7 @@ import win32api
 import random, time
 
 # this function generates random x & y places on the screen
+# and returns 2 x_cordinates
 def random_xy():
     x_cordinate = random.randint(0, 1920)
     y_cordinate = random.randint(0, 1080)
