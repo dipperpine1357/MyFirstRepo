@@ -1,3 +1,8 @@
+// Name: c_ex7.1.c
+// Author: dipper pine
+// Date: 15.6.2026
+// Description: takes dog's age and name prints the dog's name and age in human years
+// imports
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

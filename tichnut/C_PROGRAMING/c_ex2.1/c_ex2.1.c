@@ -1,3 +1,8 @@
+// Name: c_ex7.1.c
+// Author: dipper pine
+// Date: 15.6.2026
+// Description: no perpuse
+// imports
 #include <stdio.h>
 #include <stdlib.h>
 
