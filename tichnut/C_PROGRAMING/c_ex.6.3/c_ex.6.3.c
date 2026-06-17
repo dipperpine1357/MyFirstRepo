@@ -41,4 +41,5 @@ int main()
     printf("sum is : %d \n", my_result.sum);
 
     system("pause");
+    return 0;
 }

@@ -68,6 +68,6 @@ int main()
         printf("very good\npalindrome !!!!\n");
     }
     system("pause");
-
+    return 0;
 
 }

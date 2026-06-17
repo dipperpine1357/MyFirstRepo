@@ -1,0 +1,76 @@
+lll ug
+
+need is love
+dipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkkdipper
+baduk
+lkk
+</div>
+
+py to exe:
+"C:\Users\Dipper\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts\pyinstaller.exe" --onefile "FILE.py
+
+# Name: {Name Of File}
+# Author: {Your Name (Matrix Alias)}
+# Date: {Date}
+# Description: {Brief on What the Code Does}
+# --------
+
+
+clang
+lang -g -Wall -std=c99 -o <executablename> <sourcefiles>

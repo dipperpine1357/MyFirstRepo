@@ -15,4 +15,5 @@ int main() {
         fgets(string, 63, stdin);
     }
     return EXIT_SUCCESS;
+    return 0;
 }
