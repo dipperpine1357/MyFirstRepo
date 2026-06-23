@@ -1,4 +1,4 @@
-// Name: c_ex7.1.c
+// Name: jojo_botnet_server.c
 // Author: dipper pine
 // Date: 22.6.2026
 // Description: this code A server-side program for Jojo's Botnet where the program will accept up to 100 connections 

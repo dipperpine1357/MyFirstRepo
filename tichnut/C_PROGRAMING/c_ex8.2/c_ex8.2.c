@@ -44,5 +44,5 @@ int main()
     system("pause");
 
     free(dest_ptr);
-
+    return 0;
 }
