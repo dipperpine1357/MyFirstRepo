@@ -12,16 +12,19 @@ includes & more
 #include <stdio.h>  
 #include <strsafe.h>
 #include <errno.h>
+#define dwBytesToWrite 24
 
 
 int main()
 {
+    // IF DEF 
+    #ifdef dwBytesToWrite
 
     HANDLE hFile; 
     char filename1[300], filename2[300];
     char content[25] ;
-    DWORD dwBytesToWrite = 24, bytesread;
-    DWORD dwBytesWritten = 0;
+    DWORD bytesread;
+    DWORD dwBytesWritten = 0 ;
     BOOL error_flag = FALSE;
     OVERLAPPED ol = {0};
     ol.hEvent = CreateEvent(NULL, TRUE, FALSE, NULL);
@@ -41,12 +44,13 @@ int main()
                        FILE_ATTRIBUTE_NORMAL, // normal file
                        NULL);
     
-    // did handle work
+    //   did handle work
     if (hFile == INVALID_HANDLE_VALUE) 
     { 
         printf(TEXT("failure: unable to open file \"%s\" for read.\n"), filename1);
         return 1; 
     }
+    
 
     error_flag = ReadFile(hFile, content , sizeof(content)-1, &bytesread, NULL);
 
@@ -104,6 +108,12 @@ int main()
     
     // Close the file
     CloseHandle(hFile);
+
+    // closer to IFDEF
+    #elif
+    printf("didnt define dwBytesToWrite\n");
+    #endif
+
 
     system("pause");
     return 0;
